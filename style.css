@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap");
+
+:root {
+  --color-neutral-0: #0e0c0c;
+  --color-neutral-10: #171717;
+  --color-neutral-30: #a8a29e;
+  --color-neutral-40: #f5f5f5;
+}
+/* CONFIG BODY */
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+/* LOCALIZACAO DO FOOTER NA TELA */
+main {
+  height: 80vh;
+}
+/* CONFIG FOOTER */
+footer {
+  width: 100%; /* TAMANHO DA BARRA FOOTER HORIZONTAL */
+  color: var(--color-neutral-40); /* COR DA FONTE FOOTER */
+}
+/* REMOVENDO DESIGNER EXTERNO DAS LETRAS */
+.footer-link {
+  text-decoration: none;
+}
+/* CONFIG FOOTER */
+#footer_content {
+  background-color: var(--color-neutral-10); /* COR FUNDO FOOTER */
+  display: grid; /* CONFIG DIRECAO ITENS DENTRO DO FOOTER */
+  grid-template-columns: repeat(4, 1fr); /* DEIXAR TUDO ORGANIZADO EM COLUNAS */
+  padding: 3rem 3.5rem; /* AJUSTE ITENS DENTRO DO FOOTER */
+}
+/* CONFIG BOTOES CONTATOS */
+#footer_contacts h1 {
+  margin-bottom: 0.75rem;
+}
+/* CONFIG ESTILIZAÇÃO ITENS CONTATO */
+#footer_social_media {
+  display: flex; /* DIREÇÃO NA HORIZONTAL BOTOES CONTATO */
+  gap: 2rem; /* DISTANCIAMENTO BOTOES CONTATO */
+  margin-top: 1.5rem; /* DISTANCIAMENTO BOTOES - DE OUTROS ITENS DENTRO DO FOOTER */
+}
+
+/* CONFIG DESIGNER BOTOES ITENS */
+#footer_social_media .footer-link {
+  display: flex; /* CONFIG DESIGNER BOTOES - ICONES */
+  align-items: center; /* CONFIG DIRECIONAMENTO BOTOES - ICONES */
+  justify-content: center; /* CONFIG FORMATO BOTOES - ICONES */
+  height: 2.5rem; /* CONFIG TAMANHO BOTOES BOTOES - ICONES */
+  width: 2.5rem; /* CONFIG TAMANHO-FORMATO BOTOES - ICONES */
+  color: var(--color-neutral-40); /* VAR BORDER-RADIUS - COLOR - ICONES */
+  border-radius: 50%; /* CONFIG BORDER RADIUS - ICONES */
+  transition: all 0.4s; /* CONFIG TRANSICAO PASSAR MOUSE (DURACAO) - ICONES */
+}
+
+#footer_social_media .footer-link i {
+  font-size: 1.25rem;
+}
+
+#footer_social_media .footer-link:hover {
+  opacity: 0.8;
+}
+/* COLORAÇÃO BOLINHAS - ICONES */
+#instagram {
+  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+/* COLORAÇÃO BOLINHAS - ICONES */
+#facebook {
+  background-color: #4267b3;
+}
+/* COLORAÇÃO BOLINHAS - ICONES */
+#whatsapp {
+  background-color: #25d366;
+}
+
+.footer-list {
+  display: flex; /* DISTANCIAMENTO H2 -> P  */
+  flex-direction: column; /* DEIXAR ITENS (P) EM COLUNA  */
+  gap: 0.75rem; /* REMOVER ESTILIZACAO PADRAO ITENS (P) */
+  list-style: none; /* REMOVER (li) DOS ITENS POR ESCRITO */
+}
+
+.footer-list .footer-link {
+  color: var(--color-neutral-30); /* CORES <p> */
+  transition: all 0.4s; /* TRANSIÇÃO MOUSE EM CIMA ITENS */
+}
+/* COR BOTAO DE ENVIAR */
+.footer-list .footer-link:hover {
+  color: #7f37c9;
+}
+
+#footer_subscribe {
+  display: flex; /* TAMANHO BOTAO ENVIAR */
+  flex-direction: column; /* POSICAO BOTAO ENVIAR */
+  gap: 1.5rem;
+}
+
+#footer_subscribe p {
+  color: var(--color-neutral-30);
+}
+
+#input_group {
+  display: flex; /* POSICIONAMENTO DO LADO DO PLACEHOLDER BOTAO ENVIAR */
+  align-items: center; /* DESIGNER PLACEHOLDER BOTAO ENVIAR */
+  background-color: var(--color-neutral-0); /* DESIGNER PLACEHOLDER */
+  border-radius: 4px; /* BORDE-RADIUS PLACEHOLDER */
+}
+
+#input_group input {
+  all: unset; /* THEME DARK PLACE HOLDER */
+  padding: 0.75rem; /* EXPESSURA PLACEHOLDER */
+  width: 100%; /* EXPESSURA RESPONSIVIDADE PLACEHOLDER */
+}
+
+#input_group button {
+  background-color: #7f37c9; /* COR BOTAO ENVIAR */
+  border: none; /* ICONE DENTRO BOTAO ENVIAR */
+  color: var(--color-neutral-40); /* COR ICONE DENTRO BOTAO ENVIAR */
+  padding: 0px 1.25rem; /* TAMANNHO ICONE DENTRO BOTAO ENVIAR */
+  font-size: 1.125rem; /* TAMANNHO ICONE DENTRO BOTAO ENVIAR */
+  height: 100%; /* TAMANNHO ICONE DENTRO BOTAO ENVIAR */
+  border-radius: 0px 4px 4px 0px; /* CONFIG BORDA ICONE DENTRO BOTAO ENVIAR */
+  cursor: pointer; /* CURSOR DENTRO BOTAO ENVIAR */
+  transition: all 0.4s; /* TRANSFORM PASSAR MOUSE BOTAO ENVIAR */
+}
+
+#input_group button:hover {
+  opacity: 0.8; /* TRANSFORM PASSAR MOUSE BOTAO ENVIAR */
+}
+
+#footer_copyright {
+  display: flex; /* SOLTA <P> dentro do copy */
+  justify-content: center; /* posiciona no meio */
+  background-color: var(--color-neutral-0); /* cor */
+  font-size: 0.9rem; /* tamanho da barra */
+  padding: 1.5rem; /* tamanho da barra */
+  font-weight: 100px; /* tamanho da fonte */
+}
+
+@media screen and (max-width: 768px) {
+  #footer_content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  #footer_content {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 3rem 2rem;
+  }
+}
